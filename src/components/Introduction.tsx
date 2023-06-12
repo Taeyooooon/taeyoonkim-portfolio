@@ -2,17 +2,13 @@ import React from 'react';
 import Link from 'next/link';
 const Introduction = () => {
   return (
-    <section className=' flex h-screen w-screen '>
+    <section className=' flex h-screen w-screen'>
       <aside className=' flex w-1/5 min-w-[160px] flex-col items-center justify-between bg-[#202224] py-24 text-white'>
         <ul className='flex flex-col gap-4'>
           {LINK_MAP.map(({ title, link }) => {
             return (
               <li key={link}>
-                <Link
-                  href={link}
-                  target='_blank'
-                  className='text-3xl dark:text-red-400'
-                >
+                <Link href={link} target='_blank' className='text-3xl'>
                   {title}
                 </Link>
               </li>

@@ -10,7 +10,7 @@ export default function Home() {
       <Background />
       <Introduction />
       <DarkModeButton />
-      <div className='h-[500vh]'></div>
+      <div className='h-[500vh]' />
       <ScrollTopButton />
     </>
   );

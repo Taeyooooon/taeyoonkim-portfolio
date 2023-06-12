@@ -1,16 +1,44 @@
 'use client';
 
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { AiOutlineArrowUp } from 'react-icons/ai';
+import Lottie from 'react-lottie';
+import scroll from '../../../public/scroll.json';
+
 const ScrollTopButton = () => {
+  const [isScrollable, setIsScrollable] = useState(true);
+
   const scrollToTop = useCallback(
     () => window.scroll({ top: 0, behavior: 'smooth' }),
     []
   );
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    window.addEventListener('scroll', () => {
+      // 스크롤 가장 아래 위치하면 false
+      if (innerHeight + scrollY >= document.body.offsetHeight) {
+        setIsScrollable(false);
+      } else setIsScrollable(true);
+    });
+  }, []);
+
+  const lottieOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: scroll,
+  };
+
   return (
-    <button className='btn-circle btn btn-outline fixed right-4 bottom-4' onClick={scrollToTop}>
-      <AiOutlineArrowUp className='text-2xl' />
+    <button className='btn-outline btn-circle btn fixed bottom-4 right-4 bg-white'>
+      {isScrollable ? (
+        <Lottie options={lottieOptions} ariaRole='img' isClickToPauseDisabled />
+      ) : (
+        <AiOutlineArrowUp
+          onClick={scrollToTop}
+          className='text-2xl text-black'
+        />
+      )}
     </button>
   );
 };
