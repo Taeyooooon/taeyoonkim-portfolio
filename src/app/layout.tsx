@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from '@/components/Navbar';
 import './globals.css';
 import { Jua } from 'next/font/google';
 
@@ -18,7 +17,6 @@ export default function RootLayout({
   return (
     <html lang='ko'>
       <body className={jua.className}>
-        <Navbar />
         <main>{children}</main>
       </body>
     </html>
