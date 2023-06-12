@@ -20,11 +20,11 @@ const updateDarkMode = (darkMode: boolean) => {
   if (darkMode) {
     localStorage.theme = 'dark';
     document.documentElement.classList.add('dark');
-    document.documentElement.setAttribute('data-theme', 'dracula');
+    // document.documentElement.setAttribute('data-theme', 'dracula');
   } else {
     localStorage.theme = 'light';
     document.documentElement.classList.remove('dark');
-    document.documentElement.setAttribute('data-theme', 'light');
+    // document.documentElement.setAttribute('data-theme', 'light');
   }
 };
 

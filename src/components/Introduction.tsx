@@ -8,7 +8,11 @@ const Introduction = () => {
           {LINK_MAP.map(({ title, link }) => {
             return (
               <li key={link}>
-                <Link href={link} target='_blank' className='text-3xl'>
+                <Link
+                  href={link}
+                  target='_blank'
+                  className='text-3xl dark:text-red-400'
+                >
                   {title}
                 </Link>
               </li>

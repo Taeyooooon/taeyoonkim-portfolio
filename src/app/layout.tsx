@@ -1,5 +1,6 @@
 import React from 'react';
-import './globals.css';
+import './globals.scss';
+import './index.scss';
 import { Jua } from 'next/font/google';
 import Providers from '@/app/providers';
 
