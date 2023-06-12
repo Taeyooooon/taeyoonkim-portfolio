@@ -3,12 +3,12 @@ import Link from 'next/link';
 const Introduction = () => {
   return (
     <section className=' flex h-screen w-screen '>
-      <aside className=' my-20 flex w-1/5 flex-col items-center justify-between'>
-        <ul className='flex flex-col'>
+      <aside className=' flex w-1/5 min-w-[160px] flex-col items-center justify-between bg-[#202224] py-24 text-white'>
+        <ul className='flex flex-col gap-4'>
           {LINK_MAP.map(({ title, link }) => {
             return (
               <li key={link}>
-                <Link href={link} target='_blank' className='text-2xl'>
+                <Link href={link} target='_blank' className='text-3xl'>
                   {title}
                 </Link>
               </li>
@@ -18,9 +18,13 @@ const Introduction = () => {
         <div>
           <p>010-3336-0673</p>
           <Link href='mailto:eric8401@gmail.com'>eric8401@gmail.com</Link>
+          {/* TODO: Constant값으로 관리하기 */}
+          <p className=' text-neutral-400'>Last Updated : 123123</p>
         </div>
       </aside>
-      <section className=' w-4/5'>Introduction</section>
+      <section className=' flex w-4/5 items-center justify-center'>
+        Introduction
+      </section>
     </section>
   );
 };

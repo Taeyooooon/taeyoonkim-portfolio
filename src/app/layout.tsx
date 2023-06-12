@@ -1,6 +1,7 @@
 import React from 'react';
 import './globals.css';
 import { Jua } from 'next/font/google';
+import Providers from '@/app/providers';
 
 const jua = Jua({ subsets: ['latin'], weight: '400' });
 
@@ -15,10 +16,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='ko'>
-      <body className={jua.className}>
-        <main>{children}</main>
-      </body>
-    </html>
+    <Providers>
+      <html lang='ko'>
+        <body className={jua.className}>
+          <main>{children}</main>
+        </body>
+      </html>
+    </Providers>
   );
 }
