@@ -1,8 +1,8 @@
 @function multiple-box-shadow($n) {
-  $value: "#{random(700)}vh #{random(100)}vh #FFF";
+  $value: '#{random(700)}vh #{random(100)}vh #FFF';
 
   @for $i from 2 through $n {
-      $value: "#{$value} , #{random(700)}vh #{random(100)}vh #FFF";
+    $value: '#{$value} , #{random(700)}vh #{random(100)}vh #FFF';
   }
 
   @return unquote($value);
@@ -20,13 +20,13 @@ $shadows-big: multiple-box-shadow(100);
   animation: animStar 50s linear infinite;
 
   &:after {
-      content: " ";
-      position: absolute;
-      top: 100vh;
-      width: 1px;
-      height: 1px;
-      background: transparent;
-      box-shadow: $shadows-small;
+    content: ' ';
+    position: absolute;
+    top: 100vh;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $shadows-small;
   }
 }
 
@@ -38,13 +38,13 @@ $shadows-big: multiple-box-shadow(100);
   animation: animStar 70s linear infinite;
 
   &:after {
-      content: " ";
-      position: absolute;
-      top: 100vh;
-      width: 2px;
-      height: 2px;
-      background: transparent;
-      box-shadow: $shadows-medium;
+    content: ' ';
+    position: absolute;
+    top: 100vh;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $shadows-medium;
   }
 }
 
@@ -56,22 +56,28 @@ $shadows-big: multiple-box-shadow(100);
   animation: animStar 100s linear infinite;
 
   &:after {
-      content: " ";
-      position: absolute;
-      top: 100vh;
-      width: 3px;
-      height: 3px;
-      background: transparent;
-      box-shadow: $shadows-big;
+    content: ' ';
+    position: absolute;
+    top: 100vh;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: $shadows-big;
   }
 }
 
 @keyframes animStar {
   from {
-      transform: translateY(0);
+    transform: translateY(0);
   }
 
   to {
-      transform: translateY(-100vh);
+    transform: translateY(-100vh);
   }
+}
+
+// text-stroke
+.text_stroke {
+  color: transparent;
+  -webkit-text-stroke: 0.02em #3b82f6;
 }

@@ -3,6 +3,8 @@ import './globals.scss';
 import './index.scss';
 import { Jua } from 'next/font/google';
 import Providers from '@/app/providers';
+import DarkModeButton from '@/components/ui/DarkModeButton';
+import ScrollTopButton from '@/components/ui/ScrollTopButton';
 
 const jua = Jua({ subsets: ['latin'], weight: '400' });
 
@@ -21,6 +23,8 @@ export default function RootLayout({
       <html lang='ko'>
         <body className={jua.className}>
           <main>{children}</main>
+          <DarkModeButton />
+          <ScrollTopButton />
         </body>
       </html>
     </Providers>

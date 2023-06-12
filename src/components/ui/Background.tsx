@@ -1,4 +1,5 @@
 'use client';
+
 import React, { useEffect, useState } from 'react';
 
 const Background = () => {
@@ -15,7 +16,7 @@ const Background = () => {
     <div
       className={`${
         bgColor === 'black' ? 'bg-black' : 'bg-white'
-      } fixed left-0 top-0 -z-10 h-full w-full transition-all duration-300`}
+      } fixed left-0 top-0 -z-[1] h-full w-full transition-all duration-300`}
     >
       {bgColor === 'black' && (
         <>
@@ -27,16 +28,5 @@ const Background = () => {
     </div>
   );
 };
-
-// const Container = styled.div<{ bgColor: string }>`
-//   background-color: ${({ bgColor }) => bgColor};
-//   transition: 0.2s;
-//   width: 100%;
-//   height: 100%;
-//   position: fixed;
-//   z-index: -1;
-//   top: 0;
-//   left: 0;
-// `;
 
 export default Background;
