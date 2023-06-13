@@ -14,16 +14,63 @@ const PinnedScrollAnimation = ({ children }: Props) => {
   const startRef = useRef(null);
 
   useLayoutEffect(() => {
-    gsap.from(startRef.current, {
-      scrollTrigger: {
-        trigger: startRef.current,
-        scrub: 1,
-        pin: true,
-        start: 'top top',
-        end: '+=100%',
-        markers: true,
-      },
-    });
+    let context = gsap.context(() => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: startRef.current,
+            scrub: 1,
+            pin: true,
+            start: 'top top',
+            end: '+=100%',
+            markers: true,
+          },
+        })
+        .from('.firstFadeIn', {
+          y: -100,
+          opacity: 0,
+        })
+        .to('.underlineAnimation', {
+          scrollTrigger: {
+            trigger: '.underlineAnimation',
+            toggleActions: 'play none none none',
+          },
+          backgroundImage: `linear-gradient(transparent 80%, #60a5fa 20%)`,
+          backgroundSize: '100% 100%',
+          duration: 0.6,
+          ease: 'expo.out',
+        })
+        .from('.secondFadeIn', {
+          x: -100,
+          opacity: 0,
+        })
+        .from('.thirdFadeIn', {
+          x: -100,
+          opacity: 0,
+        })
+        .from('.fourthFadeIn', {
+          x: -100,
+          opacity: 0,
+        })
+        .from('.fifthFadeIn', {
+          x: -100,
+          opacity: 0,
+        })
+        .from('.sixthFadeIn', {
+          opacity: 0,
+        });
+    }, startRef);
+    return () => context.revert();
+    // gsap.from(startRef.current, {
+    //   scrollTrigger: {
+    //     trigger: startRef.current,
+    //     scrub: 1,
+    //     pin: true,
+    //     start: 'top top',
+    //     end: '+=100%',
+    //     markers: true,
+    //   },
+    // });
   }, []);
 
   return (

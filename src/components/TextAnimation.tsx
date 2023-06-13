@@ -53,7 +53,7 @@ const TextAnimation = () => {
   return (
     <div
       ref={startTrigger}
-      className={` h-screen w-full flex items-center overflow-hidden text-blue-500 ${
+      className={` h-screen w-full flex items-center overflow-hidden text-blue-400 ${
         isShown ? 'opacity-100' : 'opacity-0'
       } `}
     >
