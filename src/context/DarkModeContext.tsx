@@ -20,9 +20,11 @@ const updateDarkMode = (darkMode: boolean) => {
   if (darkMode) {
     localStorage.theme = 'dark';
     document.documentElement.classList.add('dark');
+    document.documentElement.setAttribute('data-theme', 'dark');
   } else {
     localStorage.theme = 'light';
     document.documentElement.classList.remove('dark');
+    document.documentElement.setAttribute('data-theme', 'light');
   }
 };
 

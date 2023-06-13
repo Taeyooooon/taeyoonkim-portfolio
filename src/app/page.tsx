@@ -9,8 +9,9 @@ export default function Home() {
       <Background />
       <Intro />
       <Introduction />
+      <div className=' bg-red-300'>그다음</div>
 
-      <div className='h-[500vh]' />
+      <div className='h-[1000vh]' />
     </div>
   );
 }

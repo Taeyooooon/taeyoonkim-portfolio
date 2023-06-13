@@ -4,8 +4,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
-
 // register ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
@@ -24,6 +22,8 @@ const TextAnimation = () => {
         start: 'top top',
         toggleActions: 'play play play play',
         scrub: 1,
+        // markers: true, // gsap devtool 같은
+        toggleClass: 'toggled',
       },
       x: 1500,
       duration: 1,

@@ -9,13 +9,14 @@ module.exports = {
     extend: {
       colors: {
         white: '#eee',
-        black : '#222831'
+        backGround: '#222831',
       },
     },
   },
   plugins: [require('daisyui')],
   daisyui: {
-    themes: 'dracula',
+    themes: ['light', 'dark'],
+    darkMode: 'dark',
   },
   darkMode: 'class',
 };
