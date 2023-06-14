@@ -7,7 +7,7 @@ const Background = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (innerHeight * 3.5 < scrollY) setBgColor('white');
+      if (innerHeight * 4 < scrollY) setBgColor('white');
       else setBgColor('black');
     });
   }, []);

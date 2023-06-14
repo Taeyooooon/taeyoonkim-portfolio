@@ -1,7 +1,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 
-const TextAnimation = dynamic(() => import('./TextAnimation'));
+const TextAnimation = dynamic(() => import('./gsap/TextAnimation'));
 
 const Intro = () => {
   return (

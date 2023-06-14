@@ -24,6 +24,8 @@ const PinnedScrollAnimation = ({ children }: Props) => {
             start: 'top top',
             end: '+=100%',
             markers: true,
+            // TODO: progress bar 만들기
+            // onUpdate: (self) => console.log('progress:', self.progress),
           },
         })
         .from('.firstFadeIn', {
@@ -61,16 +63,6 @@ const PinnedScrollAnimation = ({ children }: Props) => {
         });
     }, startRef);
     return () => context.revert();
-    // gsap.from(startRef.current, {
-    //   scrollTrigger: {
-    //     trigger: startRef.current,
-    //     scrub: 1,
-    //     pin: true,
-    //     start: 'top top',
-    //     end: '+=100%',
-    //     markers: true,
-    //   },
-    // });
   }, []);
 
   return (

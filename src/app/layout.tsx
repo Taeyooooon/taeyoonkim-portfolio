@@ -1,10 +1,10 @@
 import React from 'react';
-import './globals.scss';
-import './index.scss';
 import { Jua } from 'next/font/google';
 import Providers from '@/app/providers';
 import DarkModeButton from '@/components/ui/DarkModeButton';
 import ScrollTopButton from '@/components/ui/ScrollTopButton';
+import './globals.scss';
+import './index.scss';
 
 const jua = Jua({ subsets: ['latin'], weight: '400' });
 

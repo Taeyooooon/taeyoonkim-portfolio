@@ -1,5 +1,5 @@
 import React from 'react';
-import PinnedScrollAnimation from '@/components/PinnedScrollAnimation';
+import PinnedScrollAnimation from '@/components/gsap/PinnedScrollAnimation';
 import Gradient from '@/components/ui/Gradient';
 import Link from 'next/link';
 
@@ -7,7 +7,7 @@ const Introduction = () => {
   return (
     <PinnedScrollAnimation>
       <section className='h-screen py-8 '>
-        <div className='mockup-window border border-black bg-base-300 h-full w-full max-w-6xl mx-auto'>
+        <div className='mockup-window border border-black bg-base-300 h-full w-full max-w-screen-xl mx-auto'>
           <div className='flex justify-center items-center h-full w-full bg-base-200'>
             <div className=' text-3xl text-center flex flex-col gap-12'>
               <div className='flex items-center justify-center gap-8'>

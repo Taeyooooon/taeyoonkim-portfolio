@@ -2,6 +2,7 @@ import React from 'react';
 import Intro from '@/components/Intro';
 import Background from '@/components/ui/Background';
 import Introduction from '@/app/Introduction';
+import Skills from '@/components/Skills';
 
 export default function Home() {
   return (
@@ -9,7 +10,8 @@ export default function Home() {
       <Background />
       <Intro />
       <Introduction />
-      <div className='h-screen'>그다음</div>
+      <Skills/>
+      
 
       <div className='h-[1000vh]' />
     </div>
