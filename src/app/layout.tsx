@@ -14,7 +14,7 @@ export const metadata = {
   openGraph: {
     title: `김태윤 포트폴리오`,
     description: `프론트엔드 김태윤 포트폴리오`,
-    images: `/public/pingu.jpg`,
+    images: `/pingu.jpg`,
   },
 };
 
