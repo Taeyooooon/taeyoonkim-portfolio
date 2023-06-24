@@ -54,7 +54,8 @@ const TextAnimation = () => {
     <div
       ref={startTrigger}
       className={` h-screen w-full flex items-center overflow-hidden text-blue-400 ${
-        isShown ? 'opacity-100' : 'opacity-0'
+        // isShown ? 'opacity-100' : 'opacity-0'
+        isShown ? ' block' : ' hidden'
       } `}
     >
       <div className={textContainerStyle}>

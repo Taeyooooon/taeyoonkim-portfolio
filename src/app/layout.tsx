@@ -1,12 +1,10 @@
 import React from 'react';
-import { Jua } from 'next/font/google';
 import Providers from '@/app/providers';
 import DarkModeButton from '@/components/ui/DarkModeButton';
 import ScrollTopButton from '@/components/ui/ScrollTopButton';
-import './globals.scss';
-import './index.scss';
-
-const jua = Jua({ subsets: ['latin'], weight: '400' });
+import '@/styles/globals.scss';
+import '@/styles/index.scss';
+import { jua } from '@/app/font';
 
 export const metadata = {
   title: '김태윤 포트폴리오',

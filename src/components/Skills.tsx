@@ -5,7 +5,7 @@ import SkillsAnimation from '@/components/gsap/SkillsAnimation';
 const Skills = () => {
   return (
     <section className='max-w-screen-xl mx-auto mt-20'>
-      <h2 className='text-7xl mb-8'>
+      <h2 className='text-8xl mb-20'>
         <Gradient>Skills.</Gradient>
       </h2>
 

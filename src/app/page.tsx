@@ -1,8 +1,9 @@
 import React from 'react';
 import Intro from '@/components/Intro';
 import Background from '@/components/ui/Background';
-import Introduction from '@/app/Introduction';
+import Introduction from '@/components/Introduction';
 import Skills from '@/components/Skills';
+import Projects from '@/components/Projects';
 
 export default function Home() {
   return (
@@ -10,8 +11,8 @@ export default function Home() {
       <Background />
       <Intro />
       <Introduction />
-      <Skills/>
-      
+      <Skills />
+      <Projects />
 
       <div className='h-[1000vh]' />
     </div>
