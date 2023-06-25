@@ -7,7 +7,7 @@ import Projects from '@/components/Projects';
 
 export default function Home() {
   return (
-    <div className=' overflow-x-hidden'>
+    <>
       <Background />
       <Intro />
       <Introduction />
@@ -15,6 +15,6 @@ export default function Home() {
       <Projects />
 
       <div className='h-[1000vh]' />
-    </div>
+    </>
   );
 }

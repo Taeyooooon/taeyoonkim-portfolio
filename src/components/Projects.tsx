@@ -6,6 +6,7 @@ import { BiLinkAlt } from 'react-icons/bi';
 import { HiCheck } from 'react-icons/hi';
 import { FiTool } from 'react-icons/fi';
 import { gothic_a1 } from '@/app/font';
+import TableOfContents from '@/components/TableOfContents';
 
 const Projects = () => {
   return (
@@ -13,82 +14,95 @@ const Projects = () => {
       <h2 className='text-8xl mb-20'>
         <Gradient>Projects.</Gradient>
       </h2>
+      <section className='flex relative'>
+        <TableOfContents />
+        <article className='flex flex-col gap-20 w-4/5'>
+          {PROJECTS_MAP.map(
+            (
+              {
+                projectId,
+                title,
+                type,
+                date,
+                skills,
+                github,
+                notion,
+                descriptions,
+              },
+              index
+            ) => {
+              return (
+                <section key={index} className='flex flex-col gap-6'>
+                  <span className='text-xl'>{type}</span>
 
-      <div className='flex flex-col gap-20'>
-        {PROJECTS_MAP.map(
-          (
-            { title, type, date, skills, github, notion, descriptions },
-            index
-          ) => {
-            return (
-              <section key={index} className='flex flex-col gap-6'>
-                <span className=' text-xl'>{type}</span>
+                  <h3 id={projectId} className='toc text-6xl font-bold'>
+                    {title}
+                  </h3>
 
-                <h2 className=' text-6xl font-bold'>{title}</h2>
+                  <span className='text-2xl'>{date}</span>
 
-                <span className='text-2xl'>{date}</span>
+                  <article>
+                    {descriptions.map((description, index) => {
+                      return (
+                        <p
+                          key={index}
+                          className='flex items-center gap-2 text-xl'
+                        >
+                          <HiCheck className='text-blue-400 text-2xl' />
+                          {description}
+                        </p>
+                      );
+                    })}
+                  </article>
 
-                <article>
-                  {descriptions.map((description, index) => {
-                    return (
-                      <p
-                        key={index}
-                        className='flex items-center gap-2 text-xl'
-                      >
-                        <HiCheck className=' text-blue-400 text-2xl' />
-                        {description}
-                      </p>
-                    );
-                  })}
-                </article>
+                  <p className='flex items-center gap-2 text-2xl font-bold'>
+                    <FiTool />
+                    사용 기술들
+                  </p>
 
-                <p className='flex items-center gap-2 text-2xl font-bold'>
-                  <FiTool />
-                  사용 기술들
-                </p>
+                  <ul className='flex items-center gap-2 font-bold'>
+                    {skills.map((skill, index) => {
+                      return (
+                        <li
+                          key={index}
+                          className=' badge badge-outline border-2 badge-lg'
+                        >
+                          <span className='text-lg'>{skill}</span>
+                        </li>
+                      );
+                    })}
+                  </ul>
 
-                <ul className='flex items-center gap-2 font-bold'>
-                  {skills.map((skill, index) => {
-                    return (
-                      <li
-                        key={index}
-                        className=' badge badge-outline border-2 badge-lg'
-                      >
-                        <span className='text-lg'>{skill}</span>
-                      </li>
-                    );
-                  })}
-                </ul>
+                  <p className='flex items-center gap-2 text-2xl font-bold'>
+                    <BiLinkAlt className=' text-2xl' />
+                    관련 링크들
+                  </p>
 
-                <p className='flex items-center gap-2 text-2xl font-bold'>
-                  <BiLinkAlt className=' text-2xl' />
-                  관련 링크들
-                </p>
+                  <div className='flex flex-col gap-2'>
+                    <Link
+                      href={github}
+                      target='_blank'
+                      className='flex items-center gap-2 link text-xl'
+                    >
+                      <SiGithub className=' text-2xl' />
+                      Github 링크
+                    </Link>
 
-                <div className='flex flex-col gap-2'>
-                  <Link
-                    href={github}
-                    target='_blank'
-                    className='flex items-center gap-2 link text-xl'
-                  >
-                    <SiGithub className=' text-2xl' />
-                    Github 링크
-                  </Link>
-
-                  <Link
-                    href={notion}
-                    target='_blank'
-                    className='flex items-center gap-2 link text-xl'
-                  >
-                    <SiNotion className=' text-2xl' />
-                    Notion에서 자세히 보기
-                  </Link>
-                </div>
-              </section>
-            );
-          }
-        )}
-      </div>
+                    <Link
+                      href={notion}
+                      target='_blank'
+                      className='flex items-center gap-2 link text-xl'
+                    >
+                      <SiNotion className=' text-2xl' />
+                      Notion에서 자세히 보기
+                    </Link>
+                  </div>
+                </section>
+              );
+            }
+          )}
+        </article>
+      </section>
     </section>
   );
 };
@@ -96,6 +110,7 @@ export default Projects;
 
 const PROJECTS_MAP = [
   {
+    projectId: 'portfolio',
     title: '포트폴리오 프로젝트',
     type: '개인 프로젝트',
     date: '2023.06 ~ 진행중',
@@ -111,7 +126,161 @@ const PROJECTS_MAP = [
     ],
   },
   {
+    projectId: 'bootstrap',
     title: '이력서 포맷 서비스',
+    type: '팀 프로젝트',
+    date: '2023.05 ~ 진행중',
+    skills: [
+      'NextJS',
+      'TypeScript',
+      'TailwindCSS',
+      'MaterialUI',
+      'React Hook Form',
+      'NextAuth',
+    ],
+    github: 'https://github.com/ratatat-io/bootstrap',
+    notion:
+      'https://www.notion.so/taeyooooon/Bootstrap-c9a4858c91794d9bb2237886cfafff34?pvs=4',
+    descriptions: [
+      'Github, Google OAuth 로그인 구현',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'Focus된 인풋의 데이터가 표출될 부분으로 스크롤되면서 강조되는 기능 구현',
+      'ISR 랜더링 방식을 적용해 초기 로딩속도가 빠른 페이지 구현',
+      'SEO를 위한 meta태그 작성',
+    ],
+  },
+  {
+    projectId: 'test',
+    title: '테스트용1',
+    type: '팀 프로젝트',
+    date: '2023.05 ~ 진행중',
+    skills: [
+      'NextJS',
+      'TypeScript',
+      'TailwindCSS',
+      'MaterialUI',
+      'React Hook Form',
+      'NextAuth',
+    ],
+    github: 'https://github.com/ratatat-io/bootstrap',
+    notion:
+      'https://www.notion.so/taeyooooon/Bootstrap-c9a4858c91794d9bb2237886cfafff34?pvs=4',
+    descriptions: [
+      'Github, Google OAuth 로그인 구현',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'Focus된 인풋의 데이터가 표출될 부분으로 스크롤되면서 강조되는 기능 구현',
+      'ISR 랜더링 방식을 적용해 초기 로딩속도가 빠른 페이지 구현',
+      'SEO를 위한 meta태그 작성',
+    ],
+  },
+  {
+    projectId: 'test2',
+    title: '테스트용2',
+    type: '팀 프로젝트',
+    date: '2023.05 ~ 진행중',
+    skills: [
+      'NextJS',
+      'TypeScript',
+      'TailwindCSS',
+      'MaterialUI',
+      'React Hook Form',
+      'NextAuth',
+    ],
+    github: 'https://github.com/ratatat-io/bootstrap',
+    notion:
+      'https://www.notion.so/taeyooooon/Bootstrap-c9a4858c91794d9bb2237886cfafff34?pvs=4',
+    descriptions: [
+      'Github, Google OAuth 로그인 구현',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'Focus된 인풋의 데이터가 표출될 부분으로 스크롤되면서 강조되는 기능 구현',
+      'ISR 랜더링 방식을 적용해 초기 로딩속도가 빠른 페이지 구현',
+      'SEO를 위한 meta태그 작성',
+    ],
+  },
+  {
+    projectId: 'test3',
+    title: '테스트용3',
+    type: '팀 프로젝트',
+    date: '2023.05 ~ 진행중',
+    skills: [
+      'NextJS',
+      'TypeScript',
+      'TailwindCSS',
+      'MaterialUI',
+      'React Hook Form',
+      'NextAuth',
+    ],
+    github: 'https://github.com/ratatat-io/bootstrap',
+    notion:
+      'https://www.notion.so/taeyooooon/Bootstrap-c9a4858c91794d9bb2237886cfafff34?pvs=4',
+    descriptions: [
+      'Github, Google OAuth 로그인 구현',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'Focus된 인풋의 데이터가 표출될 부분으로 스크롤되면서 강조되는 기능 구현',
+      'ISR 랜더링 방식을 적용해 초기 로딩속도가 빠른 페이지 구현',
+      'SEO를 위한 meta태그 작성',
+    ],
+  },
+  {
+    projectId: 'test4',
+    title: '테스트용4',
+    type: '팀 프로젝트',
+    date: '2023.05 ~ 진행중',
+    skills: [
+      'NextJS',
+      'TypeScript',
+      'TailwindCSS',
+      'MaterialUI',
+      'React Hook Form',
+      'NextAuth',
+    ],
+    github: 'https://github.com/ratatat-io/bootstrap',
+    notion:
+      'https://www.notion.so/taeyooooon/Bootstrap-c9a4858c91794d9bb2237886cfafff34?pvs=4',
+    descriptions: [
+      'Github, Google OAuth 로그인 구현',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'Focus된 인풋의 데이터가 표출될 부분으로 스크롤되면서 강조되는 기능 구현',
+      'ISR 랜더링 방식을 적용해 초기 로딩속도가 빠른 페이지 구현',
+      'SEO를 위한 meta태그 작성',
+    ],
+  },
+  {
+    projectId: 'test5',
+    title: '테스트용5',
     type: '팀 프로젝트',
     date: '2023.05 ~ 진행중',
     skills: [
