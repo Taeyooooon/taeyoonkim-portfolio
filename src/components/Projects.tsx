@@ -7,6 +7,7 @@ import { HiCheck } from 'react-icons/hi';
 import { FiTool } from 'react-icons/fi';
 import { gothic_a1 } from '@/app/font';
 import TableOfContents from '@/components/TableOfContents';
+import FadeInAnimation from '@/components/gsap/FadeInAnimation';
 
 const Projects = () => {
   return (
@@ -33,69 +34,84 @@ const Projects = () => {
             ) => {
               return (
                 <section key={index} className='flex flex-col gap-6'>
-                  <span className='text-xl'>{type}</span>
+                  <FadeInAnimation>
+                    <span className='text-xl'>{type}</span>
+                  </FadeInAnimation>
 
-                  <h3 id={projectId} className='toc text-6xl font-bold'>
-                    {title}
-                  </h3>
+                  <FadeInAnimation>
+                    <h3 id={projectId} className='toc text-6xl font-bold'>
+                      {title}
+                    </h3>
+                  </FadeInAnimation>
 
-                  <span className='text-2xl'>{date}</span>
+                  <FadeInAnimation>
+                    <span className='text-2xl'>{date}</span>
+                  </FadeInAnimation>
 
                   <article>
                     {descriptions.map((description, index) => {
                       return (
-                        <p
-                          key={index}
-                          className='flex items-center gap-2 text-xl'
-                        >
-                          <HiCheck className='text-blue-400 text-2xl' />
-                          {description}
-                        </p>
+                        <FadeInAnimation key={index}>
+                          <p className='flex items-center gap-2 text-xl'>
+                            <HiCheck className='text-blue-400 text-2xl' />
+                            {description}
+                          </p>
+                        </FadeInAnimation>
                       );
                     })}
                   </article>
 
-                  <p className='flex items-center gap-2 text-2xl font-bold'>
-                    <FiTool />
-                    사용 기술들
-                  </p>
+                  <FadeInAnimation>
+                    <p className='flex items-center gap-2 text-2xl font-bold'>
+                      <FiTool />
+                      사용 기술들
+                    </p>
+                  </FadeInAnimation>
 
-                  <ul className='flex items-center gap-2 font-bold'>
-                    {skills.map((skill, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className=' badge badge-outline border-2 badge-lg'
-                        >
-                          <span className='text-lg'>{skill}</span>
-                        </li>
-                      );
-                    })}
-                  </ul>
+                  <FadeInAnimation>
+                    <ul className='flex items-center gap-2 font-bold'>
+                      {skills.map((skill, index) => {
+                        return (
+                          <li
+                            key={index}
+                            className=' badge badge-outline border-2 badge-lg'
+                          >
+                            <span className='text-lg'>{skill}</span>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </FadeInAnimation>
 
-                  <p className='flex items-center gap-2 text-2xl font-bold'>
-                    <BiLinkAlt className=' text-2xl' />
-                    관련 링크들
-                  </p>
+                  <FadeInAnimation>
+                    <p className='flex items-center gap-2 text-2xl font-bold'>
+                      <BiLinkAlt className=' text-2xl' />
+                      관련 링크들
+                    </p>
+                  </FadeInAnimation>
 
                   <div className='flex flex-col gap-2'>
-                    <Link
-                      href={github}
-                      target='_blank'
-                      className='flex items-center self-start gap-2 link text-xl'
-                    >
-                      <SiGithub className=' text-2xl' />
-                      Github 링크
-                    </Link>
+                    <FadeInAnimation>
+                      <Link
+                        href={github}
+                        target='_blank'
+                        className='flex items-center self-start gap-2 link text-xl'
+                      >
+                        <SiGithub className=' text-2xl' />
+                        Github 링크
+                      </Link>
+                    </FadeInAnimation>
 
-                    <Link
-                      href={notion}
-                      target='_blank'
-                      className='flex items-center self-start gap-2 link text-xl'
-                    >
-                      <SiNotion className=' text-2xl' />
-                      Notion에서 자세히 보기
-                    </Link>
+                    <FadeInAnimation>
+                      <Link
+                        href={notion}
+                        target='_blank'
+                        className='flex items-center self-start gap-2 link text-xl'
+                      >
+                        <SiNotion className=' text-2xl' />
+                        Notion에서 자세히 보기
+                      </Link>
+                    </FadeInAnimation>
                   </div>
                 </section>
               );

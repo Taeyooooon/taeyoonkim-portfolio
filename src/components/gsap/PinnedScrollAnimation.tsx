@@ -23,7 +23,7 @@ const PinnedScrollAnimation = ({ children }: Props) => {
             pin: true,
             start: 'top top',
             end: '+=100%',
-            markers: true,
+            // markers: true,
             // TODO: progress bar 만들기
             // onUpdate: (self) => console.log('progress:', self.progress),
           },

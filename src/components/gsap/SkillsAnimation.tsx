@@ -22,7 +22,7 @@ const SkillsAnimation = ({ children }: Props) => {
             scrub: 1,
             start: 'top 70%',
             end: '+=100%',
-            markers: true,
+            // markers: true,
           },
         })
         .from('.fadeIn0', {
