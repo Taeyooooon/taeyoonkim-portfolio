@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 export function useHeadingObserver() {
   const [activeId, setActiveId] = useState('');
+
   useEffect(() => {
     const callback = (entries: IntersectionObserverEntry[]) => {
       const visibleHeadings: string[] = [];
@@ -14,6 +15,7 @@ export function useHeadingObserver() {
       const getIndexFromId = (id: string) =>
         headingElements.findIndex((heading) => heading.id === id);
 
+      // TODO: 
       if (visibleHeadings.length === 1) {
         setActiveId(visibleHeadings[0]);
       } else if (visibleHeadings.length > 1) {

@@ -11,7 +11,7 @@ import TableOfContents from '@/components/TableOfContents';
 const Projects = () => {
   return (
     <section className={`${gothic_a1.className} max-w-screen-xl mx-auto mt-20`}>
-      <h2 className='text-8xl mb-20'>
+      <h2 id='projects' className='toc text-8xl mb-20'>
         <Gradient>Projects.</Gradient>
       </h2>
       <section className='flex relative'>
@@ -82,7 +82,7 @@ const Projects = () => {
                     <Link
                       href={github}
                       target='_blank'
-                      className='flex items-center gap-2 link text-xl'
+                      className='flex items-center self-start gap-2 link text-xl'
                     >
                       <SiGithub className=' text-2xl' />
                       Github 링크
@@ -91,7 +91,7 @@ const Projects = () => {
                     <Link
                       href={notion}
                       target='_blank'
-                      className='flex items-center gap-2 link text-xl'
+                      className='flex items-center self-start gap-2 link text-xl'
                     >
                       <SiNotion className=' text-2xl' />
                       Notion에서 자세히 보기
@@ -130,14 +130,7 @@ const PROJECTS_MAP = [
     title: '이력서 포맷 서비스',
     type: '팀 프로젝트',
     date: '2023.05 ~ 진행중',
-    skills: [
-      'NextJS',
-      'TypeScript',
-      'TailwindCSS',
-      'MaterialUI',
-      'React Hook Form',
-      'NextAuth',
-    ],
+    skills: ['NextJS', 'TypeScript', 'TailwindCSS', 'MaterialUI'],
     github: 'https://github.com/ratatat-io/bootstrap',
     notion:
       'https://www.notion.so/taeyooooon/Bootstrap-c9a4858c91794d9bb2237886cfafff34?pvs=4',
@@ -154,53 +147,49 @@ const PROJECTS_MAP = [
     title: '테스트용1',
     type: '팀 프로젝트',
     date: '2023.05 ~ 진행중',
-    skills: [
-      'NextJS',
-      'TypeScript',
-      'TailwindCSS',
-      'MaterialUI',
-      'React Hook Form',
-      'NextAuth',
-    ],
+    skills: ['NextJS', 'TypeScript', 'TailwindCSS', 'MaterialUI'],
     github: 'https://github.com/ratatat-io/bootstrap',
     notion:
       'https://www.notion.so/taeyooooon/Bootstrap-c9a4858c91794d9bb2237886cfafff34?pvs=4',
     descriptions: [
       'Github, Google OAuth 로그인 구현',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
-      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
+      'ㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹㅁㄹ이ㅏ먼이ㅓ미라ㅓㅁㄹ',
       'Focus된 인풋의 데이터가 표출될 부분으로 스크롤되면서 강조되는 기능 구현',
       'ISR 랜더링 방식을 적용해 초기 로딩속도가 빠른 페이지 구현',
       'SEO를 위한 meta태그 작성',
@@ -211,18 +200,16 @@ const PROJECTS_MAP = [
     title: '테스트용2',
     type: '팀 프로젝트',
     date: '2023.05 ~ 진행중',
-    skills: [
-      'NextJS',
-      'TypeScript',
-      'TailwindCSS',
-      'MaterialUI',
-      'React Hook Form',
-      'NextAuth',
-    ],
+    skills: ['NextJS', 'TypeScript', 'TailwindCSS', 'MaterialUI'],
     github: 'https://github.com/ratatat-io/bootstrap',
     notion:
       'https://www.notion.so/taeyooooon/Bootstrap-c9a4858c91794d9bb2237886cfafff34?pvs=4',
     descriptions: [
+      'Github, Google OAuth 로그인 구현',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'Focus된 인풋의 데이터가 표출될 부분으로 스크롤되면서 강조되는 기능 구현',
+      'ISR 랜더링 방식을 적용해 초기 로딩속도가 빠른 페이지 구현',
+      'SEO를 위한 meta태그 작성',
       'Github, Google OAuth 로그인 구현',
       'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
       'Focus된 인풋의 데이터가 표출될 부분으로 스크롤되면서 강조되는 기능 구현',
@@ -235,18 +222,16 @@ const PROJECTS_MAP = [
     title: '테스트용3',
     type: '팀 프로젝트',
     date: '2023.05 ~ 진행중',
-    skills: [
-      'NextJS',
-      'TypeScript',
-      'TailwindCSS',
-      'MaterialUI',
-      'React Hook Form',
-      'NextAuth',
-    ],
+    skills: ['NextJS', 'TypeScript', 'TailwindCSS', 'MaterialUI'],
     github: 'https://github.com/ratatat-io/bootstrap',
     notion:
       'https://www.notion.so/taeyooooon/Bootstrap-c9a4858c91794d9bb2237886cfafff34?pvs=4',
     descriptions: [
+      'Github, Google OAuth 로그인 구현',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'Focus된 인풋의 데이터가 표출될 부분으로 스크롤되면서 강조되는 기능 구현',
+      'ISR 랜더링 방식을 적용해 초기 로딩속도가 빠른 페이지 구현',
+      'SEO를 위한 meta태그 작성',
       'Github, Google OAuth 로그인 구현',
       'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
       'Focus된 인풋의 데이터가 표출될 부분으로 스크롤되면서 강조되는 기능 구현',
@@ -259,18 +244,16 @@ const PROJECTS_MAP = [
     title: '테스트용4',
     type: '팀 프로젝트',
     date: '2023.05 ~ 진행중',
-    skills: [
-      'NextJS',
-      'TypeScript',
-      'TailwindCSS',
-      'MaterialUI',
-      'React Hook Form',
-      'NextAuth',
-    ],
+    skills: ['NextJS', 'TypeScript', 'TailwindCSS', 'MaterialUI'],
     github: 'https://github.com/ratatat-io/bootstrap',
     notion:
       'https://www.notion.so/taeyooooon/Bootstrap-c9a4858c91794d9bb2237886cfafff34?pvs=4',
     descriptions: [
+      'Github, Google OAuth 로그인 구현',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'Focus된 인풋의 데이터가 표출될 부분으로 스크롤되면서 강조되는 기능 구현',
+      'ISR 랜더링 방식을 적용해 초기 로딩속도가 빠른 페이지 구현',
+      'SEO를 위한 meta태그 작성',
       'Github, Google OAuth 로그인 구현',
       'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
       'Focus된 인풋의 데이터가 표출될 부분으로 스크롤되면서 강조되는 기능 구현',
@@ -283,18 +266,16 @@ const PROJECTS_MAP = [
     title: '테스트용5',
     type: '팀 프로젝트',
     date: '2023.05 ~ 진행중',
-    skills: [
-      'NextJS',
-      'TypeScript',
-      'TailwindCSS',
-      'MaterialUI',
-      'React Hook Form',
-      'NextAuth',
-    ],
+    skills: ['NextJS', 'TypeScript', 'TailwindCSS', 'MaterialUI'],
     github: 'https://github.com/ratatat-io/bootstrap',
     notion:
       'https://www.notion.so/taeyooooon/Bootstrap-c9a4858c91794d9bb2237886cfafff34?pvs=4',
     descriptions: [
+      'Github, Google OAuth 로그인 구현',
+      'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
+      'Focus된 인풋의 데이터가 표출될 부분으로 스크롤되면서 강조되는 기능 구현',
+      'ISR 랜더링 방식을 적용해 초기 로딩속도가 빠른 페이지 구현',
+      'SEO를 위한 meta태그 작성',
       'Github, Google OAuth 로그인 구현',
       'React Hook Form 을 이용한 복잡한 데이터 구조의 폼관리',
       'Focus된 인풋의 데이터가 표출될 부분으로 스크롤되면서 강조되는 기능 구현',

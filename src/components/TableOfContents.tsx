@@ -15,31 +15,45 @@ const TableOfContents = () => {
 
   useEffect(() => {
     const elements = Array.from(document.querySelectorAll('.toc'));
-    const headingElements = elements.map((element) => {
-      const { nodeName, childNodes, id } = element;
+    const headingElements = elements.map(({ nodeName, childNodes, id }) => {
       return { nodeName, id, text: childNodes[0].textContent };
     });
     setHeadings(headingElements);
   }, []);
 
   return (
-    <aside className='sticky self-start top-20 w-1/5'>
+    <aside className='sticky self-start top-20 w-1/5 mt-20'>
       <ul>
         {headings.map(({ nodeName, id, text }, index) => {
-          // console.log('nodeName : ', nodeName); //TODO: nodeName 에 들어오는 태그별로 스타일 지정가능
+          switch (nodeName) {
+            case 'H2':
+              return (
+                <li
+                  key={index}
+                  className={`${
+                    id === activeId && 'text-blue-400 font-bold scale-105'
+                  } text-base mt-4 mb-2 transition-all duration-200`}
+                >
+                  {/* FIXME: next 13.4.5에서는 Link태그로 id이동 불가능한걸로 확인 */}
+                  <a href={`#${id}`}>{text}</a>
+                </li>
+              );
+            case 'H3':
+              return (
+                <li
+                  key={index}
+                  className={`${
+                    id === activeId && 'text-blue-400 font-bold scale-105'
+                  } text-sm ml-4 transition-all duration-200`}
+                >
+                  {/* FIXME: next 13.4.5에서는 Link태그로 id이동 불가능한걸로 확인 */}
+                  <a href={`#${id}`}>{text}</a>
+                </li>
+              );
 
-          return (
-            <li
-              key={index}
-              className={`${
-                id === activeId && 'text-blue-400 scale-105'
-              } transition-all duration-200`}
-            >
-              {/* <Link href={`/#${id}`}>{text}</Link> */}
-              {/* TODO: nextjs에서 Link태그로 id 이동 가능한지 확인, 우선 공식문서에는 안보임 */}
-              <a href={`#${id}`}>{text}</a>
-            </li>
-          );
+            default:
+              return '';
+          }
         })}
       </ul>
     </aside>
