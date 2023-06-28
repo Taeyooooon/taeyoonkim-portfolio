@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -15,7 +15,7 @@ const TextAnimation = () => {
   const borderText1 = useRef(null);
   const borderText2 = useRef(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const config = {
       scrollTrigger: {
         trigger: startTrigger.current,
@@ -87,6 +87,7 @@ const TextAnimation = () => {
 };
 export default TextAnimation;
 
-const circleStyle = 'relative w-[35rem] h-[35rem] bg-white rounded-full';
+const circleStyle =
+  'relative bg-white rounded-full md:w-[35rem] md:h-[35rem] w-full h-auto';
 const textContainerStyle = 'absolute top-[25vh] w-full';
 const secondStyle = 'absolute left-auto right-0';

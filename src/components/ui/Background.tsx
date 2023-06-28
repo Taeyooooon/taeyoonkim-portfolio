@@ -15,7 +15,7 @@ const Background = () => {
   return (
     <div
       className={`${
-        bgColor === 'black' ? 'bg-backGround' : 'bg-white'
+        bgColor === 'black' ? 'bg-backGround' : 'bg-white dark:bg-backGround'
       } fixed left-0 top-0 -z-20 h-full w-full transition-all duration-300`}
     >
       {bgColor === 'black' && (

@@ -4,6 +4,7 @@ import Gradient from '@/components/ui/Gradient';
 import { SiGithub, SiNotion } from 'react-icons/si';
 import { BiLinkAlt } from 'react-icons/bi';
 import { HiCheck } from 'react-icons/hi';
+import { BsGlobe } from 'react-icons/bs';
 import { FiTool } from 'react-icons/fi';
 import { gothic_a1 } from '@/app/font';
 import TableOfContents from '@/components/TableOfContents';
@@ -28,6 +29,7 @@ const Projects = () => {
                 skills,
                 github,
                 notion,
+                deployLink,
                 descriptions,
               },
               index
@@ -45,7 +47,7 @@ const Projects = () => {
                   </FadeInAnimation>
 
                   <FadeInAnimation>
-                    <span className='text-2xl'>{date}</span>
+                    <span className='text-lg'>{date}</span>
                   </FadeInAnimation>
 
                   <article>
@@ -64,7 +66,7 @@ const Projects = () => {
                   <FadeInAnimation>
                     <p className='flex items-center gap-2 text-2xl font-bold'>
                       <FiTool />
-                      사용 기술들
+                      기술스택
                     </p>
                   </FadeInAnimation>
 
@@ -90,29 +92,42 @@ const Projects = () => {
                     </p>
                   </FadeInAnimation>
 
-                  <div className='flex flex-col gap-2'>
-                    <FadeInAnimation>
-                      <Link
-                        href={github}
-                        target='_blank'
-                        className='flex items-center self-start gap-2 link text-xl'
-                      >
-                        <SiGithub className=' text-2xl' />
-                        Github 링크
-                      </Link>
-                    </FadeInAnimation>
+                  <FadeInAnimation>
+                    <div className='flex flex-col gap-2'>
+                      {github && (
+                        <Link
+                          href={github}
+                          target='_blank'
+                          className='flex items-center self-start gap-2 link text-xl'
+                        >
+                          <SiGithub className=' text-2xl' />
+                          Github 링크
+                        </Link>
+                      )}
 
-                    <FadeInAnimation>
-                      <Link
-                        href={notion}
-                        target='_blank'
-                        className='flex items-center self-start gap-2 link text-xl'
-                      >
-                        <SiNotion className=' text-2xl' />
-                        Notion에서 자세히 보기
-                      </Link>
-                    </FadeInAnimation>
-                  </div>
+                      {notion && (
+                        <Link
+                          href={notion}
+                          target='_blank'
+                          className='flex items-center self-start gap-2 link text-xl'
+                        >
+                          <SiNotion className=' text-2xl' />
+                          Notion에서 자세히 보기
+                        </Link>
+                      )}
+
+                      {deployLink && (
+                        <Link
+                          href={deployLink}
+                          target='_blank'
+                          className='flex items-center self-start gap-2 link text-xl'
+                        >
+                          <BsGlobe className=' text-2xl' />
+                          배포링크 확인하기
+                        </Link>
+                      )}
+                    </div>
+                  </FadeInAnimation>
                 </section>
               );
             }
@@ -132,6 +147,7 @@ const PROJECTS_MAP = [
     date: '2023.06 ~ 진행중',
     skills: ['NextJS', 'TypeScript', 'TailwindCSS', 'daisyUI', 'GSAP'],
     github: 'https://github.com/Taeyooooon/taeyoonkim-portfolio',
+    deployLink: 'https://taeyoonkim-portfolio.vercel.app/',
     notion:
       'https://www.notion.so/taeyooooon/4c1637f9a9844781a6ccd41b8eb4ee23?pvs=4',
     descriptions: [

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { useHeadingObserver } from '@/hooks/useHeadingObserver';
+import { GoDot, GoDotFill } from 'react-icons/go';
 
 interface HeadingType {
   nodeName: string;
@@ -31,8 +32,8 @@ const TableOfContents = () => {
                 <li
                   key={index}
                   className={`${
-                    id === activeId && 'text-blue-400 font-bold scale-105'
-                  } text-base mt-4 mb-2 transition-all duration-200`}
+                    id === activeId && 'text-blue-400 scale-105'
+                  } text-lg font-bold transition-all duration-200`}
                 >
                   {/* FIXME: next 13.4.5에서는 Link태그로 id이동 불가능한걸로 확인 */}
                   <a href={`#${id}`}>{text}</a>
@@ -43,11 +44,15 @@ const TableOfContents = () => {
                 <li
                   key={index}
                   className={`${
-                    id === activeId && 'text-blue-400 font-bold scale-105'
-                  } text-sm ml-4 transition-all duration-200`}
+                    id === activeId && 'text-blue-400 font-bold'
+                  } text-sm transition-all duration-200`}
                 >
                   {/* FIXME: next 13.4.5에서는 Link태그로 id이동 불가능한걸로 확인 */}
-                  <a href={`#${id}`}>{text}</a>
+                  <a href={`#${id}`} className='flex gap-1 items-center'>
+                    {id === activeId ? <GoDotFill className=' text-blue-400' /> : <GoDot />}
+
+                    {text}
+                  </a>
                 </li>
               );
 

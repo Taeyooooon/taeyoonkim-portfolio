@@ -19,7 +19,6 @@ const FadeInAnimation = ({ children }: Props) => {
       scrollTrigger: {
         trigger: startTrigger.current,
         toggleActions: 'play reverse play reverse',
-
         scrub: 1,
         start: 'top 95%',
         end: '+=100',
