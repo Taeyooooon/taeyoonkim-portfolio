@@ -43,11 +43,14 @@ const Introduction = () => {
               <ul className='sixthFadeIn mb-16 flex justify-center gap-4'>
                 {Link_MAP.map(({ name, link }) => {
                   return (
-                    <Link href={link} key={link} target='_blank'>
-                      <li className='btn lg:btn-wide bg-blue-200 text-2xl hover:bg-blue-400 hover:text-white dark:text-black dark:hover:text-white'>
+                    <li
+                      className='btn lg:btn-wide bg-blue-200 text-2xl hover:bg-blue-400 hover:text-white dark:text-black dark:hover:text-white'
+                      key={link}
+                    >
+                      <Link href={link} target='_blank'>
                         <span>{name}</span>
-                      </li>
-                    </Link>
+                      </Link>
+                    </li>
                   );
                 })}
               </ul>

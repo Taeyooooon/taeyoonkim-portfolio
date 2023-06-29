@@ -12,12 +12,12 @@ const Skills = () => {
       <ul className='flex items-center justify-between mb-16'>
         {SKILLS_LIST.map((skill) => {
           return (
-            <div
+            <li
               className='badge border-white text-white bg-transparent text-base py-4 px-2 md:px-4'
               key={skill}
             >
               {skill}
-            </div>
+            </li>
           );
         })}
       </ul>
@@ -32,7 +32,7 @@ const Skills = () => {
                   idx % 2 === 0 ? ' chat-start self-start' : 'chat-end self-end'
                 } fadeIn${idx}`}
               >
-                <h4 className=' chat-header text-2xl text-white'>{name}</h4>
+                <p className=' chat-header text-2xl text-white'>{name}</p>
                 <article className=' chat-bubble w-full leading-loose'>
                   {details.map((detail) => {
                     return <p key={detail}>{`- ${detail}`}</p>;
