@@ -6,6 +6,7 @@ import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import DarkModeButton from '@/components/ui/DarkModeButton';
 import ScrollTopButton from '@/components/ui/ScrollTopButton';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -15,8 +16,7 @@ export default function Home() {
       <Introduction />
       <Skills />
       <Projects />
-
-      <div className='h-[1000vh]' />
+      <Footer />
       <DarkModeButton />
       <ScrollTopButton />
     </>
