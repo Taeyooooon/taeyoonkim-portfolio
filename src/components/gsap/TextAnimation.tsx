@@ -4,9 +4,6 @@ import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-// register ScrollTrigger
-gsap.registerPlugin(ScrollTrigger);
-
 const TextAnimation = () => {
   const startTrigger = useRef(null);
 
@@ -16,6 +13,8 @@ const TextAnimation = () => {
   const borderText2 = useRef(null);
 
   useLayoutEffect(() => {
+    // register ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
     const config = {
       scrollTrigger: {
         trigger: startTrigger.current,

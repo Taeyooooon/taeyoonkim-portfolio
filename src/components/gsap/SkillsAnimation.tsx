@@ -4,7 +4,6 @@ import React, { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
 
 interface Props {
   children: React.ReactNode;
@@ -12,8 +11,9 @@ interface Props {
 
 const SkillsAnimation = ({ children }: Props) => {
   const startRef = useRef(null);
-
+  
   useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     let context = gsap.context(() => {
       gsap
         .timeline({

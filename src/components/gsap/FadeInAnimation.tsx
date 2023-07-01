@@ -4,9 +4,6 @@ import React, { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-// register ScrollTrigger
-gsap.registerPlugin(ScrollTrigger);
-
 interface Props {
   children: React.ReactNode;
 }
@@ -15,6 +12,8 @@ const FadeInAnimation = ({ children }: Props) => {
   const startTrigger = useRef(null);
 
   useLayoutEffect(() => {
+    // register ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
     gsap.from(startTrigger.current, {
       scrollTrigger: {
         trigger: startTrigger.current,
