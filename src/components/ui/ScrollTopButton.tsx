@@ -30,7 +30,7 @@ const ScrollTopButton = () => {
   };
 
   return (
-    <button className=' btn-circle btn fixed bottom-20 right-4 bg-white z-20'>
+    <button className='btn btn-circle dark:bg-white border-backGround fixed bottom-20 right-4 z-20'>
       {isScrollable ? (
         <Lottie options={lottieOptions} ariaRole='img' isClickToPauseDisabled />
       ) : (
