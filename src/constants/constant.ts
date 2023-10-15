@@ -21,6 +21,7 @@ export const PROJECTS_LIST = [
     date: '2023.05 ~ 진행중',
     skills: ['NextJS', 'TypeScript', 'TailwindCSS', 'MaterialUI'],
     github: 'https://github.com/ratatat-io/bootstrap',
+    deployLink: 'https://staging.bootstrap.codes/',
     notion:
       'https://www.notion.so/taeyooooon/Bootstrap-c9a4858c91794d9bb2237886cfafff34?pvs=4',
     descriptions: [
