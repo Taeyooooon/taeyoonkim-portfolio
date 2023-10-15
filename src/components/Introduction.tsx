@@ -2,6 +2,7 @@ import React from 'react';
 import PinnedScrollAnimation from '@/components/gsap/PinnedScrollAnimation';
 import Gradient from '@/components/ui/Gradient';
 import Link from 'next/link';
+import { Link_LIST } from '@/constants/constant';
 
 const Introduction = () => {
   return (
@@ -41,7 +42,7 @@ const Introduction = () => {
                 </div>
               </div>
               <ul className='sixthFadeIn mb-16 flex justify-center gap-4'>
-                {Link_MAP.map(({ name, link }) => {
+                {Link_LIST.map(({ name, link }) => {
                   return (
                     <li
                       className='btn lg:btn-wide bg-blue-200 text-2xl hover:bg-blue-400 hover:text-white dark:text-black dark:hover:text-white'
@@ -62,18 +63,3 @@ const Introduction = () => {
   );
 };
 export default Introduction;
-
-const Link_MAP = [
-  {
-    name: 'Mail',
-    link: 'mailto:eric8401@gmail.com',
-  },
-  {
-    name: 'GitHub',
-    link: 'https://github.com/Taeyooooon',
-  },
-  {
-    name: 'Blog',
-    link: 'https://velog.io/@taeyooooon',
-  },
-];
