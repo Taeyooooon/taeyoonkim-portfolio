@@ -3,6 +3,7 @@ import Providers from '@/app/providers';
 import '@/styles/globals.scss';
 import '@/styles/index.scss';
 import { jua } from '@/app/font';
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: '김태윤 포트폴리오',
@@ -24,7 +25,7 @@ export default function RootLayout({
       <html lang='ko'>
         <body className={jua.className}>
           <main>{children}</main>
-          
+          <Analytics />
         </body>
       </html>
     </Providers>
